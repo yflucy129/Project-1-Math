@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Second Chapter</title>
+	<link rel="stylesheet" href="secondchapter.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">    
+
+</head>
+<body>
+	<h1>2. Infinite Series in Everyday Life</h1>
+
+    <div class="scrolling-container">
+        <div class="scrolling-text">
+
+	<p><strong>Infinite series — the sum of infinitely many numbers, variables or functions that follow a certain rule — are bit players in the great drama of calculus.</strong> While derivatives and integrals rightly steal the show, infinite series modestly stand off to the side. When they do make an appearance it’s near the end of the course, as everyone’s dragging themselves across the finish line.</p>
+
+	<p>So why study them? Infinite series are helpful for finding approximate solutions to difficult problems, and for illustrating subtle points of mathematical rigor. But unless you’re an aspiring scientist, that’s all a big yawn. Plus, infinite series are often presented without any real-world applications. The few that do appear — annuities, mortgages, the design of chemotherapy regimens — can seem remote to a teenage audience.</p>
+
+	<p>Before I explain, let’s look at another puzzle involving an infinite series. Solving it step by step will clarify how von Neumann solved the fly problem, and it will set the stage for thinking about infinite series more broadly.</p>
+
+	<p>Suppose you want to buy a fancy hat from a street vendor. He’s asking <span class="number-two">$24</span>. “How about <span class="number-two">$12</span>?” you say. “Let’s split the difference,” he replies, “<span class="number-two">$18</span>.”</p>
+
+	<p>Often that settles it. Splitting the difference seems reasonable, but not for you, because you’ve read the same negotiation manual, “The Art of Infinite Haggling.” You counter with your own offer to split the difference, except now it’s between <span class="number-two">$12</span> and the last number on the table, <span class="number-two">$18</span>. “So how about it?” you say, “<span class="number-two">$15</span> and it’s a deal.” “Oh no, my friend, let’s split the difference again, <span class="number-two">$16.50</span>,” says the vendor. This goes on ad absurdum until you converge on the same price. What is that ultimate price?</p>
+
+    <p>The answer is the sum of an infinite series. To see what it is, observe that the successive offers follow an orderly pattern:</p>
+
+    <pre>
+<span class="number">24</span>                     <span class="text">his asking price</span>
+<span class="number">12  =  24 − 12</span>           <span class="text">your first offer</span>
+<span class="number">18  =  24 − 12 + 6</span>       <span class="text">splitting the difference between 12 and 24</span>
+<span class="number">15  =  24 − 12 + 6 − 3</span>    <span class="text">splitting it between 12 and 18</span>
+    </pre>
+    
+    <p>The key is that the numbers on the left side of the equal sign are built up systematically from the ever-lengthening series of numbers on the right. Each number appearing in the sequence <span class="number-two">(24, −12, 6, −3…)</span> is half the number that precedes it, but with the opposite sign. So in the limit, the price P that you and the vendor will agree to is:</p>
+
+    <span class="number">P = 24 – 12 + 6 – 3 + …</span>
+
+    <p>where the three dots mean the series continues forever.</p>
+
+    <p>Rather than trying to wrap our minds around such an infinitely long expression, we can perform a cunning trick that makes the problem easy. It allows us to cancel out that bewilderingly infinite collection of terms, leaving us with something much simpler to calculate.</p>
+
+    <p><i>"The pioneers of calculus discovered that all the functions they were familiar with could be converted into the universal currency of “power series.”"</i></p>
+
+    <p>Specifically, let’s double <span class="number-two">P</span>. That would also double all the numbers on the right. Thus,</p>
+
+    <span class="number">2P = 48 – 24 + 12 – 6 + ….</span>
+
+    <p>How does this help? Observe that the infinite chain of terms in <span class="number-two">2P</span> is almost the same as that in <span class="number-two">P</span> itself, except that we have a new leading number (<span class="number-two">48</span>), and all the plus and minus signs for our original numbers are reversed. So if we add the series for <span class="number-two">P</span> to the series for <span class="number-two">2P</span>, the <span class="number-two">24</span>s and the <span class="number-two">12</span>s and everything else will cancel out in pairs, except for the <span class="number-two">48</span>, which has no counterpart to cancel it. So <span class="number-two">2P + P = 48</span> , meaning <span class="number-two">3P = 48</span> and therefore,</p>
+
+    <span class="number">P = $16.</span>
+
+    <p>That’s what you’d pay for the hat after haggling forever.</p>
+
+    <p>The problem of the fly and the two bicycles follows a similar mathematical pattern. With a bit of effort, you could deduce that each leg of the fly’s back-and-forth journey is one-fifth as long as the previous leg. Von Neumann would have found it child’s play to sum the resulting “geometric series,” the special kind of series we’ve been considering, in which all consecutive terms have the same ratio. For the fly problem, that ratio is <span class="number-two">15</span>. For the haggling problem, it’s <span class="number-two">−12.</span></p>
+
+    <p>In general, any geometric series <span class="number-two">S</span> has the form:</p>
+
+    <p><span class="number">S = a + ar + ar2 + ar3 + …</span></p>
+
+    <p>where <span class="number-two">r</span> is the ratio and a is what’s called the leading term. If the ratio <span class="number-two">r</span> lies between −1 and 1, as it did in our two problems, the trick used above can be adapted by multiplying not by <span class="number-two">2</span> but by <span class="number-two">r</span> to show that the sum of the series is:</p>
+
+    <p><span class="number">S =  a1–r.</span></p>
+
+    <p>Specifically, for the haggling problem, a was <span class="number-two">$24</span> and <span class="number-two">r</span> was <span class="number-two">−12</span>. Plugging those numbers into the formula gives <span class="number-two">S = 2432</span>, which equals <span class="number-two">$16</span>, as before.</p>
+
+    <p>For the fly problem, we have to work a bit to find the leading term, a. It’s the distance traveled by the fly on the first leg of its back-and-forth journey, so to calculate it we must figure out where the fly traveling at <span class="number-two">15 miles an hour</span> first meets the bicycle approaching it at <span class="number-two">10 miles an hour</span>. Because their speeds form the ratio <span class="number-two">15:10</span>, or <span class="number-two">3:2</span>, they meet when the fly has traveled <span class="number-two">33 + 2</span> of the initial <span class="number-two">20-mile</span> separation, which tells us <span class="number-two">a = 35 × 20 = 12</span> miles. Similar reasoning reveals that the legs shrink by a ratio of <span class="number-two">r = 15</span> each time the fly turns around. Von Neumann saw all of this instantly and, using the <span class="number-two">a1 – r</span> formula above, he found the total distance traveled by the fly:</p>
+
+    <p><span class="number">S = 121−15 = 1245 = 604 = 15 miles.</span></p>
+
+</div>
+</div>
+
+    <div class="nav-buttons">
+        <a href="firstchapter.html" class="nav-button back-button"> Back</a>
+        <a href="thirdchapter.html" class="nav-button next-button"> Next</a>
+    </div>
+
+    <script>
+        function createMathSymbol() {
+        let body = document.querySelector('body');
+    
+        let mathSymbols = ["∑", "∞", "π", "𝑒", "√", "dx", "∫", "≈", "→", "𝑖"];
+    
+        let numSymbols = Math.floor(Math.random() * 3) + 2; 
+    
+        for (let i = 0; i < numSymbols; i++) {
+            let symbol = document.createElement('span');
+            let randomSymbol = mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
+    
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+    
+            let randomSize = Math.floor(Math.random() * 26) + 15;
+    
+            symbol.innerText = randomSymbol;
+            symbol.classList.add("math-symbol");
+            symbol.style.left = x + 'px';
+            symbol.style.top = y + 'px';
+            symbol.style.fontSize = randomSize + "px";
+    
+            body.appendChild(symbol);
+    
+            setTimeout(function() {
+                symbol.remove();
+            }, 1500);
+        }
+    }
+    
+    setInterval(createMathSymbol, 200);
+    
+    
+        document.addEventListener("DOMContentLoaded", () => {
+        const scrollingContainer = document.querySelector(".scrolling-container");
+        const scrollingText = document.querySelector(".scrolling-text");
+    
+        scrollingText.innerHTML += scrollingText.innerHTML;
+    
+        let scrollY = 0;
+        let baseSpeed = 15;
+        let speedMultiplier = 1; 
+    
+        scrollingContainer.addEventListener("wheel", (event) => {
+            event.preventDefault();
+    
+            speedMultiplier = Math.min(4, Math.abs(event.deltaY / 30));
+    
+            scrollY += event.deltaY > 0 ? baseSpeed * speedMultiplier : -baseSpeed * speedMultiplier;
+            scrollingText.style.transform = `translateY(${-scrollY}px)`;
+    
+            let textHeight = scrollingText.scrollHeight / 2;
+            if (scrollY >= textHeight) {
+                scrollY = 0;
+                scrollingText.style.transform = "translateY(0)";
+            } else if (scrollY <= 0) {
+                scrollY = textHeight;
+                scrollingText.style.transform = `translateY(${-scrollY}px)`;
+            }
+        });
+    });
+    
+    </script>
+
+</body>
+</html>
