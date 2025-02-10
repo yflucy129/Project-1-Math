@@ -29,13 +29,13 @@ body {
     font-size: 18rem;
     color: #333;
     display: flex;
-    gap: 3rem; /* Ensures continuous flow */
+    gap: 3rem; 
     animation: scrollText 25s linear infinite;
 }
 
 .scrolling-title span {
     display: inline-block;
-    padding-right: 3rem; /* Adjust spacing */
+    padding-right: 3rem; 
 }
 
 @keyframes scrollText {
@@ -68,11 +68,11 @@ h2, h3 {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight:bold;
 }
 
 .bottom-menu a:hover {
-    color: #f8c291;
+    color: #acacac;
 }
 
 .math-symbol {
