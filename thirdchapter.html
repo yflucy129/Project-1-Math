@@ -21,7 +21,7 @@
     <div class="scrolling-container">
         <div class="scrolling-text">
 
-	<p><strong>Now back to the larger point: How do series like this serve to connect the various parts of math? To see this, we need to enlarge our point of view about formulas like:</strong></p>
+	<p>Now back to the larger point: How do series like this serve to connect the various parts of math? To see this, we need to enlarge our point of view about formulas like:</p>
 
 	<span class="number">1 + r + r2 + r3 + … = 11 − r,</span>
 
@@ -59,7 +59,7 @@
 
     <p>But once I learned about infinite series, I could no longer see math as a tower. Nor is it a tree, as another metaphor would have it. Its different parts are not branches that split off and go their separate ways. No — math is a web. All its parts connect to and support each other.</p>
 
-    <p><strong>Now back to the larger point: How do series like this serve to connect the various parts of math? To see this, we need to enlarge our point of view about formulas like:</strong></p>
+    <p>Now back to the larger point: How do series like this serve to connect the various parts of math? To see this, we need to enlarge our point of view about formulas like:</p>
 
 	<span class="number">1 + r + r2 + r3 + … = 11 − r,</span>
 
@@ -107,38 +107,6 @@
 </div>
 
 <script>
-    function createMathSymbol() {
-    let body = document.querySelector('body');
-
-    let mathSymbols = ["∑", "∞", "π", "𝑒", "√", "dx", "∫", "≈", "→", "𝑖"];
-
-    let numSymbols = Math.floor(Math.random() * 3) + 2; 
-
-    for (let i = 0; i < numSymbols; i++) {
-        let symbol = document.createElement('span');
-        let randomSymbol = mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
-
-        let x = Math.random() * window.innerWidth;
-        let y = Math.random() * window.innerHeight;
-
-        let randomSize = Math.floor(Math.random() * 26) + 15;
-
-        symbol.innerText = randomSymbol;
-        symbol.classList.add("math-symbol");
-        symbol.style.left = x + 'px';
-        symbol.style.top = y + 'px';
-        symbol.style.fontSize = randomSize + "px";
-
-        body.appendChild(symbol);
-
-        setTimeout(function() {
-            symbol.remove();
-        }, 1500);
-    }
-}
-
-setInterval(createMathSymbol, 200);
-
 
     document.addEventListener("DOMContentLoaded", () => {
     const scrollingContainer = document.querySelector(".scrolling-container");

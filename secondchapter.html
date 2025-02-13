@@ -21,7 +21,7 @@
     <div class="scrolling-container">
         <div class="scrolling-text">
 
-	<p><strong>Infinite series — the sum of infinitely many numbers, variables or functions that follow a certain rule — are bit players in the great drama of calculus.</strong> While derivatives and integrals rightly steal the show, infinite series modestly stand off to the side. When they do make an appearance it’s near the end of the course, as everyone’s dragging themselves across the finish line.</p>
+	<p>Infinite series — the sum of infinitely many numbers, variables or functions that follow a certain rule — are bit players in the great drama of calculus. While derivatives and integrals rightly steal the show, infinite series modestly stand off to the side. When they do make an appearance it’s near the end of the course, as everyone’s dragging themselves across the finish line.</p>
 
 	<p>So why study them? Infinite series are helpful for finding approximate solutions to difficult problems, and for illustrating subtle points of mathematical rigor. But unless you’re an aspiring scientist, that’s all a big yawn. Plus, infinite series are often presented without any real-world applications. The few that do appear — annuities, mortgages, the design of chemotherapy regimens — can seem remote to a teenage audience.</p>
 
@@ -33,13 +33,36 @@
 
     <p>The answer is the sum of an infinite series. To see what it is, observe that the successive offers follow an orderly pattern:</p>
 
+	<p>Infinite series — the sum of infinitely many numbers, variables or functions that follow a certain rule — are bit players in the great drama of calculus. While derivatives and integrals rightly steal the show, infinite series modestly stand off to the side. When they do make an appearance it’s near the end of the course, as everyone’s dragging themselves across the finish line.</p>
+
+	<p>So why study them? Infinite series are helpful for finding approximate solutions to difficult problems, and for illustrating subtle points of mathematical rigor. But unless you’re an aspiring scientist, that’s all a big yawn. Plus, infinite series are often presented without any real-world applications. The few that do appear — annuities, mortgages, the design of chemotherapy regimens — can seem remote to a teenage audience.</p>
+
+	<p>Before I explain, let’s look at another puzzle involving an infinite series. Solving it step by step will clarify how von Neumann solved the fly problem, and it will set the stage for thinking about infinite series more broadly.</p>
+
+	<p>Suppose you want to buy a fancy hat from a street vendor. He’s asking <span class="number-two">$24</span>. “How about <span class="number-two">$12</span>?” you say. “Let’s split the difference,” he replies, “<span class="number-two">$18</span>.”</p>
+
+	<p>Often that settles it. Splitting the difference seems reasonable, but not for you, because you’ve read the same negotiation manual, “The Art of Infinite Haggling.” You counter with your own offer to split the difference, except now it’s between <span class="number-two">$12</span> and the last number on the table, <span class="number-two">$18</span>. “So how about it?” you say, “<span class="number-two">$15</span> and it’s a deal.” “Oh no, my friend, let’s split the difference again, <span class="number-two">$16.50</span>,” says the vendor. This goes on ad absurdum until you converge on the same price. What is that ultimate price?</p>
+
+    <p>The answer is the sum of an infinite series. To see what it is, observe that the successive offers follow an orderly pattern:</p>
+
+	<p>Infinite series — the sum of infinitely many numbers, variables or functions that follow a certain rule — are bit players in the great drama of calculus. While derivatives and integrals rightly steal the show, infinite series modestly stand off to the side. When they do make an appearance it’s near the end of the course, as everyone’s dragging themselves across the finish line.</p>
+
+	<p>So why study them? Infinite series are helpful for finding approximate solutions to difficult problems, and for illustrating subtle points of mathematical rigor. But unless you’re an aspiring scientist, that’s all a big yawn. Plus, infinite series are often presented without any real-world applications. The few that do appear — annuities, mortgages, the design of chemotherapy regimens — can seem remote to a teenage audience.</p>
+
+	<p>Before I explain, let’s look at another puzzle involving an infinite series. Solving it step by step will clarify how von Neumann solved the fly problem, and it will set the stage for thinking about infinite series more broadly.</p>
+
+	<p>Suppose you want to buy a fancy hat from a street vendor. He’s asking <span class="number-two">$24</span>. “How about <span class="number-two">$12</span>?” you say. “Let’s split the difference,” he replies, “<span class="number-two">$18</span>.”</p>
+
+	<p>Often that settles it. Splitting the difference seems reasonable, but not for you, because you’ve read the same negotiation manual, “The Art of Infinite Haggling.” You counter with your own offer to split the difference, except now it’s between <span class="number-two">$12</span> and the last number on the table, <span class="number-two">$18</span>. “So how about it?” you say, “<span class="number-two">$15</span> and it’s a deal.” “Oh no, my friend, let’s split the difference again, <span class="number-two">$16.50</span>,” says the vendor. This goes on ad absurdum until you converge on the same price. What is that ultimate price?</p>
+
+    <p>The answer is the sum of an infinite series. To see what it is, observe that the successive offers follow an orderly pattern:</p>
     <pre>
-<span class="number">24</span>                     <span class="text">his asking price</span>
-<span class="number">12  =  24 − 12</span>           <span class="text">your first offer</span>
-<span class="number">18  =  24 − 12 + 6</span>       <span class="text">splitting the difference between 12 and 24</span>
-<span class="number">15  =  24 − 12 + 6 − 3</span>    <span class="text">splitting it between 12 and 18</span>
-    </pre>
-    
+        <span class="number">24</span>                                    <span class="text">his asking price</span>
+        <span class="number">12  =  24 − 12</span>                                     <span class="text">your first offer</span>
+        <span class="number">18  =  24 − 12 + 6</span>                          <span class="text">splitting the difference between 12 and 24</span>
+        <span class="number">15  =  24 − 12 + 6 − 3</span>                               <span class="text">splitting it between 12 and 18</span>
+        </pre>
+        
     <p>The key is that the numbers on the left side of the equal sign are built up systematically from the ever-lengthening series of numbers on the right. Each number appearing in the sequence <span class="number-two">(24, −12, 6, −3…)</span> is half the number that precedes it, but with the opposite sign. So in the limit, the price P that you and the vendor will agree to is:</p>
 
     <span class="number">P = 24 – 12 + 6 – 3 + …</span>
@@ -85,39 +108,6 @@
     </div>
 
     <script>
-        function createMathSymbol() {
-        let body = document.querySelector('body');
-    
-        let mathSymbols = ["∑", "∞", "π", "𝑒", "√", "dx", "∫", "≈", "→", "𝑖"];
-    
-        let numSymbols = Math.floor(Math.random() * 3) + 2; 
-    
-        for (let i = 0; i < numSymbols; i++) {
-            let symbol = document.createElement('span');
-            let randomSymbol = mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
-    
-            let x = Math.random() * window.innerWidth;
-            let y = Math.random() * window.innerHeight;
-    
-            let randomSize = Math.floor(Math.random() * 26) + 15;
-    
-            symbol.innerText = randomSymbol;
-            symbol.classList.add("math-symbol");
-            symbol.style.left = x + 'px';
-            symbol.style.top = y + 'px';
-            symbol.style.fontSize = randomSize + "px";
-    
-            body.appendChild(symbol);
-    
-            setTimeout(function() {
-                symbol.remove();
-            }, 1500);
-        }
-    }
-    
-    setInterval(createMathSymbol, 200);
-    
-    
         document.addEventListener("DOMContentLoaded", () => {
         const scrollingContainer = document.querySelector(".scrolling-container");
         const scrollingText = document.querySelector(".scrolling-text");

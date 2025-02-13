@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #121826; 
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -10,6 +10,7 @@ body {
     align-items: center;
     overflow: hidden; 
     text-align: center;
+    color: #f8f9fa;
 }
 
 .title-container {
@@ -27,7 +28,7 @@ body {
     white-space: nowrap;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 18rem;
-    color: #333;
+    color: #d4af37; 
     display: flex;
     gap: 3rem; 
     animation: scrollText 25s linear infinite;
@@ -47,39 +48,41 @@ body {
     }
 }
 
-
 h2, h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 8rem;
-    color: #333;
+    color: #e0c572; 
 }
 
 .bottom-menu {
     display: flex;
     justify-content: space-around;
-    background-color: #333;
+    background-color: #181f2e; 
     padding: 15px 0;
     position: absolute;
     bottom: 0;
     width: 100%;
+    border-top: 2px solid #d4af37; 
 }
 
 .bottom-menu a {
-    color: white;
+    color: #d4af37; 
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight:bold;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .bottom-menu a:hover {
-    color: #acacac;
+    color: #f1d68c; 
+    text-shadow: 0px 0px 10px rgba(241, 214, 140, 0.8);
 }
 
 .math-symbol {
     position: fixed; 
     pointer-events: none;
     font-family: "Montserrat", serif;
-    color: #000000;
+    color: #d4af37; 
     user-select: none;
     transform: translate(-50%, -50%);
     opacity: 1;

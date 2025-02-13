@@ -6,64 +6,48 @@
 
 body {
     min-height: 100vh;
-    background: #ffffff;
+    background: #121826;
     overflow: hidden;
     position: relative;
+    font-family: 'Montserrat', sans-serif;
+    color: #f8f9fa; 
 }
 
 h1 {
-    font-family: "Bebas Neue", serif;
-    text-align:center;
-    font-size:4rem;
-    margin-bottom:1rem;
-    margin-top:1.25rem;
-    
-}
-
-pre {
-    font-size: 1.1rem;
-    margin-bottom:-2%;
-}
-
-.number {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: #333; 
-    font-size:1.5rem;
-}
-
-.text {
-    font-family: "Montserrat", serif;
-    color: #666; 
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1.25rem;
+    color: #e0c572; 
 }
 
 .number-two {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: #333; 
-    font-size:1.25rem;
+    color: #d4af37; 
+    font-size: 1.25rem;
 }
 
-.math-symbol {
-    position: fixed; 
-    pointer-events: none;
+.number {
+    font-weight: bold;
+    color: #d4af37;
+    font-size: 1.5rem;
+    display: block;
+    margin: 15px 0;
+    text-align: center;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.number:hover {
+    color: #f1d68c; 
+    text-shadow: 0px 0px 10px rgba(241, 214, 140, 0.8);
+}
+
+.text {
     font-family: "Montserrat", serif;
-    color: #000000;
-    user-select: none;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    animation: fadeOut 0.8s ease-out forwards;
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(3); 
-    }
+    font-size: 1rem;
+    color: #f8f9fa;
 }
 
 .scrolling-container {
@@ -73,7 +57,8 @@ pre {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 2rem; 
 }
 
 .scrolling-text {
@@ -82,9 +67,21 @@ pre {
     position: absolute;
     font-family: "Montserrat", serif;
     width: 60%;
-    line-height: 1.6;
+    line-height: 1.8; 
     font-size: 1.1rem;
     gap: 1.3rem; 
+    top: 0; 
+}
+
+pre {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "Courier New", Courier, monospace;
+    color: #f8f9fa;
+    font-size: 1.1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .nav-buttons {
@@ -102,27 +99,27 @@ pre {
 .nav-button {
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    color: white;
-    background: black;
+    color: #d4af37; 
+    background: #181f2e; 
+    border: 2px solid #d4af37; 
     padding: 12px 24px;
     font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     pointer-events: auto; 
 }
 
+.nav-button:hover {
+    background: #d4af37; 
+    color: #121826; 
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(212, 175, 55, 0.8); 
+}
+
 .back-button {
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 .next-button {
-    margin-right: 20px;
+    margin-right: 20px; 
 }
-
-.nav-button:hover {
-    background: #333;
-    transform: scale(1.05);
-}
-
-
-
