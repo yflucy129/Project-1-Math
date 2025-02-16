@@ -95,7 +95,7 @@ pre {
 .bottom-menu a {
     color: #d4af37;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: bold;
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }

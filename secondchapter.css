@@ -16,7 +16,7 @@ body {
 h1 {
     font-family: "Orbitron", serif;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
     margin-top: 1.25rem;
     color: #e0c572; 
@@ -100,7 +100,7 @@ pre {
 .bottom-menu a {
     color: #d4af37;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: bold;
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
