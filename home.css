@@ -28,6 +28,112 @@ body {
     white-space: nowrap;
     font-family: "Orbitron", serif;
     font-weight:500;
+    font-size: 8rem;
+    color: #d4af37; 
+    display: flex;
+    gap: 3rem; 
+    animation: scrollText 25s linear infinite;
+}
+
+.scrolling-title span {
+    display: inline-block;
+    padding-right: 3rem; 
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+h2, h3 {
+    font-family: "Orbitron", serif;
+    font-weight:100;
+    font-size: 4rem;
+    color: #e0c572; 
+}
+
+.bottom-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #181f2e; 
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #d4af37; 
+}
+
+.bottom-menu a {
+    color: #d4af37; 
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.bottom-menu a:hover {
+    color: #f1d68c; 
+    text-shadow: 0px 0px 10px rgba(241, 214, 140, 0.8);
+}
+
+.math-symbol {
+    position: fixed; 
+    pointer-events: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: #d4af37; 
+    user-select: none;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: fadeOut 1.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Mono", serif;
+    background-color: #121826; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    text-align: center;
+    color: #f8f9fa;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.9; 
+    position: relative;
+}
+
+.scrolling-title {
+    position: absolute;
+    top: 24%;
+    left: 0;
+    white-space: nowrap;
+    font-family: "Orbitron", serif;
+    font-weight:500;
     font-size: 17rem;
     color: #d4af37; 
     display: flex;
@@ -100,4 +206,5 @@ h2, h3 {
         opacity: 0;
         transform: scale(5);
     }
+}
 }
