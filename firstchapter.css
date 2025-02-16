@@ -9,21 +9,22 @@ body {
     background: #121826;
     overflow: hidden;
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "IBM Plex Mono", serif;
     color: #f8f9fa; 
 }
 
 h1 {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Orbitron", serif;
     text-align: center;
     font-size: 4rem;
     margin-bottom: 1rem;
+    font-size:3rem;
     margin-top: 1.25rem;
     color: #e0c572; 
 }
 
 .number {
-    font-weight: bold;
+    font-weight: normal;
     color: #d4af37;
     font-size: 1.5rem;
     display: block;
@@ -39,10 +40,10 @@ h1 {
 
 
 .number-two {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "IBM Plex Mono", serif;
     font-weight: bold;
     color: #d4af37; 
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .scrolling-container {
@@ -60,50 +61,137 @@ h1 {
     display: flex;
     flex-direction: column;
     position: absolute;
-    font-family: "Montserrat", serif;
+    font-family: "IBM Plex Mono", serif;
     width: 60%;
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     gap: 1.3rem; 
     top: 0; 
 }
 
-.nav-buttons {
-    position: fixed;
-    bottom: 20px; 
-    left: 0;
-    right: 0;
+.bottom-menu {
     display: flex;
-    justify-content: space-between;
-    padding: 0 40px; 
+    justify-content: space-around;
+    background-color: #181f2e; 
+    padding: 15px 0;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
     width: 100%;
-    pointer-events: none; 
+    border-top: 2px solid #d4af37; 
+    z-index: 1000; 
 }
 
-.nav-button {
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none;
+.bottom-menu a {
     color: #d4af37; 
-    background: #181f2e; 
-    border: 2px solid #d4af37; 
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    pointer-events: auto; 
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-.nav-button:hover {
-    background: #d4af37; 
-    color: #121826; 
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(212, 175, 55, 0.8); 
+.bottom-menu a:hover {
+    color: #f1d68c;
+    text-shadow: 0px 0px 10px rgba(241, 214, 140, 0.8);
 }
 
-.back-button {
-    margin-left: 20px;
-}
 
-.next-button {
-    margin-right: 20px; 
+@media screen and (min-width: 1024px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-height: 100vh;
+        background: #121826;
+        overflow: hidden;
+        position: relative;
+        font-family: "IBM Plex Mono", serif;
+        color: #f8f9fa; 
+    }
+    
+    h1 {
+        font-family: "Orbitron", serif;
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        margin-top: 1.25rem;
+        color: #e0c572; 
+    }
+    
+    .number {
+        font-weight: normal;
+        color: #d4af37;
+        font-size: 1.5rem;
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    
+    .number:hover {
+        color: #f1d68c; 
+        text-shadow: 0px 0px 10px rgba(241, 214, 140, 0.8);
+    }
+    
+    
+    .number-two {
+        font-family: "IBM Plex Mono", serif;
+        font-weight: bold;
+        color: #d4af37; 
+        font-size: 0.95rem;
+    }
+    
+    .scrolling-container {
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 2rem; 
+    }
+    
+    .scrolling-text {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        font-family: "IBM Plex Mono", serif;
+        width: 60%;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        gap: 1.3rem; 
+        top: 0; 
+    }
+    
+    .bottom-menu {
+        display: flex;
+        justify-content: space-around;
+        background-color: #181f2e; 
+        padding: 15px 0;
+        position: fixed; 
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 2px solid #d4af37;
+        z-index: 1000; 
+    }
+    
+    .bottom-menu a {
+        color: #d4af37;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    }
+    
+    .bottom-menu a:hover {
+        color: #f1d68c; 
+        text-shadow: 0px 0px 10px rgba(241, 214, 140, 0.8);
+    }
 }
+    
