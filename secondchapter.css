@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    font-family: "Orbitron", serif;
+    font-family: "Major Mono Display", serif;
     text-align: center;
     font-size: 1.75rem;
     margin-bottom: 1rem;
@@ -127,9 +127,9 @@ pre {
     }
     
     h1 {
-        font-family: "Orbitron", serif;
+        font-family: "Major Mono Display", serif;
         text-align: center;
-        font-size: 4rem;
+        font-size: 3.6rem;
         margin-bottom: 1rem;
         margin-top: 1.25rem;
         color: #e0c572; 
